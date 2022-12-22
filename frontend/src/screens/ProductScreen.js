@@ -13,6 +13,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../utils';
 import { Store } from '../Store';
+import '../index.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -67,12 +68,14 @@ function ProductScreen() {
     navigate('/cart');
   };
   return loading ? (
+    
     <LoadingBox />
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
-      <Row>
+  <div className='box'></div>
+        <Row>
         <Col md={6}>
           <img
             className="img-large"

@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import '../index.css';
 
 export default function CartScreen() {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ export default function CartScreen() {
   } = state;
 
   const updateCartHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/products/${item._id}`);
+    const { data } = await axios.get(`/api/products/₦{item._id}`);
     if (data.countInStock < quantity) {
       window.alert('Sorry. Product is out of stock');
       return;
@@ -38,6 +39,7 @@ export default function CartScreen() {
 
   return (
     <div>
+     <div className='box'></div>
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>
@@ -59,10 +61,11 @@ export default function CartScreen() {
                         alt={item.name}
                         className="img-fluid rounded img-thumbnail"
                       ></img>{' '}
-                      <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                      <Link to={`/product/₦{item.slug}`}>{item.name.slice(0,10)}</Link>
                     </Col>
                     <Col md={3}>
                       <Button
+                      className='Newbtn'
                         onClick={() =>
                           updateCartHandler(item, item.quantity - 1)
                         }
@@ -73,6 +76,7 @@ export default function CartScreen() {
                       </Button>{' '}
                       <span>{item.quantity}</span>{' '}
                       <Button
+                      className='Newbtn'
                         variant="light"
                         onClick={() =>
                           updateCartHandler(item, item.quantity + 1)
@@ -82,7 +86,7 @@ export default function CartScreen() {
                         <i className="fas fa-plus-circle"></i>
                       </Button>
                     </Col>
-                    <Col md={3}>${item.price}</Col>
+                    <Col md={3}>₦ {item.price}</Col>
                     <Col md={2}>
                       <Button
                         onClick={() => removeItemHandler(item)}
@@ -104,7 +108,7 @@ export default function CartScreen() {
                 <ListGroup.Item>
                   <h3>
                     Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
-                    items) : $
+                    items) : ₦
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
                 </ListGroup.Item>

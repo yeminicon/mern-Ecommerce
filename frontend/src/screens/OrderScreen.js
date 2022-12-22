@@ -13,6 +13,7 @@ import MessageBox from '../components/MessageBox';
 import { Store } from '../Store';
 import { getError } from '../utils';
 import { toast } from 'react-toastify';
+import '../index.css';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -135,6 +136,7 @@ function onError(err) {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
+     <div className='box'></div>
       <Helmet>
         <title>Order {orderId}</title>
       </Helmet>

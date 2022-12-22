@@ -30,11 +30,13 @@ export default function PaymentMethodScreen() {
   };
   return (
     <div>
+     <div className='box'></div>
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <div className="container small-container">
         <Helmet>
           <title>Payment Method</title>
         </Helmet>
+
         <h1 className="my-3">Payment Method</h1>
         <Form onSubmit={submitHandler}>
           <div className="mb-3">

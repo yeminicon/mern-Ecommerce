@@ -6,12 +6,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.box {
+  height: 100px;
+}
+.font {
+  color: #000000;
+}
+.category {
+  margin: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.liCategory {
+  list-style-type: none;
+  background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 0px 10px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+}
 .site-container {
   min-height: 100vh;
 }
-main {
+/* main {
   flex: 1;
-}
+} */
 .btn-primary,
 .btn-outline-primary {
   background-color: #f0c040;
@@ -81,4 +102,14 @@ main {
 }
 .text-bold {
   font-weight: bold;
+}
+.Newbtn {
+  width: 10px;
+  height: fit-content;
+  justify-content: center;
+
+ 
+}
+footer {
+  margin-top: 20px;
 }

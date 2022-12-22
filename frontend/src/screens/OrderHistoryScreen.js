@@ -54,6 +54,7 @@ export default function OrderHistoryScreen() {
       <Helmet>
         <title>Order History</title>
       </Helmet>
+      <div className='box'></div>
 
       <h1>Order History</h1>
       {loading ? (

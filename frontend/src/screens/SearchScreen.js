@@ -129,6 +129,7 @@ export default function SearchScreen() {
   };
   return (
     <div>
+     <div className='box'></div>
       <Helmet>
         <title>Search Products</title>
       </Helmet>

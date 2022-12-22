@@ -5,6 +5,8 @@ import Rating from './Rating';
 import axios from 'axios';
 import { useContext } from 'react';
 import { Store } from '../Store';
+import '../index.css';
+import ReactPaginate from "react-paginate";
 
 function Product(props) {
   const { product } = props;
@@ -15,7 +17,7 @@ function Product(props) {
   } = state;
 
   const addToCartHandler = async (item) => {
-    const existItem = cartItems.find((x) => x._id === product._id);
+    const existItem = cartItems.find((x) => x._id === product._id);// more understanding on this
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${item._id}`);
     if (data.countInStock < quantity) {
@@ -29,6 +31,8 @@ function Product(props) {
   };
 
   return (
+    <>
+
     <Card>
       <Link to={`/product/${product.slug}`}>
         <img src={product.image} className="card-img-top" alt={product.name} />
@@ -38,7 +42,7 @@ function Product(props) {
           <Card.Title>{product.name}</Card.Title>
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
-        <Card.Text>${product.price}</Card.Text>
+        <Card.Text>₦ {product.price}</Card.Text>
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
             Out of stock
@@ -48,6 +52,7 @@ function Product(props) {
         )}
       </Card.Body>
     </Card>
+    </>
   );
 }
 export default Product;
