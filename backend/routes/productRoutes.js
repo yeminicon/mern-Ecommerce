@@ -93,7 +93,7 @@ productRouter.get(
   })
 );
 
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 9;
 
 productRouter.get(
   '/admin',

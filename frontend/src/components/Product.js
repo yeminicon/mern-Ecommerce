@@ -35,12 +35,12 @@ function Product(props) {
 
     <Card>
       <Link to={`/product/${product.slug}`}>
-        <img src={product.image} className="card-img-top" alt={product.name} />
+        <img src={product.image} className="card-img-top" style={{width: '250px', height: '300px'}} alt={product.name} />
       </Link>
-      <Card.Body>
+      <Card.Body className='underline'>
         <Link to={`/product/${product.slug}`}>
-          <Card.Title>{product.name}</Card.Title>
-        </Link>
+          <Card.Title className='underline nav-link'>{product.name}</Card.Title>
+        </Link> 
         <Rating rating={product.rating} numReviews={product.numReviews} />
         <Card.Text>₦ {product.price}</Card.Text>
         {product.countInStock === 0 ? (

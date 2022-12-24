@@ -36,7 +36,7 @@ export default function AboutScreen() {
                     <h2 class = "position-relative d-inline-block ms-4">Newsletter Subscription</h2>
                 </div>
 
-                <p class = "text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rem officia accusantium maiores quisquam dolorum?</p>
+                <p class = "text-center text-muted">Are you curious about what to wear next and want to learn how to do it but are feeling intimidated or overwhelmed? Subscribe to our latest trends on moderite</p>
                 <div class = "input-group mb-3 mt-3">
                     <input type = "text" class = "form-control" placeholder="Enter Your Email ..." />
                     <button class = "btn btn-primary" type = "submit">Subscribe</button>

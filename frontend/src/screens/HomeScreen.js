@@ -57,8 +57,6 @@ function HomeScreen() {
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       }
-
-      // setProducts(result.data);
     };
     fetchData();
     const fetchCategories = async () => {
@@ -79,15 +77,8 @@ function HomeScreen() {
       for (let i = 0; i < diffLimit; i++) {
         pageArray.push(i);
       }
-      // for loop to loop for the number in with length difflimit
         console.log(pageArray.map(btn => btn + 2) );  
-//   const limitHandler = () => {
-//     const limit = 8;
-//     const diff = 8;
-//     const pageArray = [];
-//       let diffLimit = long / diff;
-//       pageArray.length = diffLimit;
-//   }
+
   
   const prev = () => {
     console.log(initialValue);

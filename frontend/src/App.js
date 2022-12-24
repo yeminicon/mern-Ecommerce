@@ -36,6 +36,7 @@ import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import Footer from './components/Footer';
 import AboutScreen from './screens/AboutScreen';
+import ShopScreen from './screens/ShopScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -238,7 +239,7 @@ function App() {
                   </AdminRoute>
                 }
               ></Route>
-              <Route path="/shop" element={<HomeScreen />} />
+              <Route path="/shop" element={<ShopScreen />} />
              
             </Routes>
           </Container>

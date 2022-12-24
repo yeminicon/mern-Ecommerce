@@ -61,7 +61,7 @@ export default function CartScreen() {
                         alt={item.name}
                         className="img-fluid rounded img-thumbnail"
                       ></img>{' '}
-                      <Link to={`/product/₦{item.slug}`}>{item.name.slice(0,10)}</Link>
+                      <Link className='underline nav-link' to={`/product/${item.slug}`}>{item.name.slice(0,10)}</Link>
                     </Col>
                     <Col md={3}>
                       <Button

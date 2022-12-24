@@ -118,6 +118,7 @@ const Collection = (props) => {
         
 )).slice(0, 4)]
   return (
+    
     <section id = "collection" className = "py-5">
         <div className = "container">
             <div className = "title text-center">
@@ -125,7 +126,7 @@ const Collection = (props) => {
             </div>
            
             <div className = "row g-0">
-                <div className = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                {/* <div className = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
                 {categories.map((category) => (
                     <button  className = "btn m-2 text-dark" data-filter = "*">
                     <LinkContainer
@@ -137,21 +138,9 @@ const Collection = (props) => {
                 </LinkContainer>
                 </button>
                 )).slice(0, 3)}
-                </div>
+                </div> */}
                 <div className = "collection-list mt-4 row gx-0 gy-3">
-                {/* {loading ? (
-          <LoadingBox />
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-            <Row>
-            {products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                <Product product={product}></Product>
-              </Col>
-            ))}
-          </Row>
-        )} */}
+
         <Row>
             {apple.slice(0, 4)}
         </Row>

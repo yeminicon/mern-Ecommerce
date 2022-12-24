@@ -31,6 +31,9 @@ body{
 .text-primary{
     color: var(--pink)!important;
 }
+#offers{
+    background: url(../../public/assets/offer_img.jpg) center/cover no-repeat;
+}
 
 /* navbar */
 .navbar{

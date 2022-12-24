@@ -36,16 +36,16 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '$1 to $50',
-    value: '1-50',
+    name: '₦1000 to ₦5000',
+    value: '1000-5000',
   },
   {
-    name: '$51 to $200',
-    value: '51-200',
+    name: '₦5100 to ₦20000',
+    value: '5100-20000',
   },
   {
-    name: '$201 to $1000',
-    value: '201-1000',
+    name: '₦20100 to ₦100000',
+    value: '20100-100000',
   },
 ];
 
@@ -137,17 +137,17 @@ export default function SearchScreen() {
         <Col md={3}>
           <h3>Department</h3>
           <div>
-            <ul>
-              <li>
+            <ul className='underline'>
+              <li className='nav-link'>
                 <Link
                   className={'all' === category ? 'text-bold' : ''}
                   to={getFilterUrl({ category: 'all' })}
                 >
-                  Any
+                  All
                 </Link>
               </li>
               {categories.map((c) => (
-                <li key={c}>
+                <li className='nav-link'  key={c}>
                   <Link
                     className={c === category ? 'text-bold' : ''}
                     to={getFilterUrl({ category: c })}
@@ -160,13 +160,13 @@ export default function SearchScreen() {
           </div>
           <div>
             <h3>Price</h3>
-            <ul>
-              <li>
+            <ul className='underline'>
+              <li className='nav-link'>
                 <Link
                   className={'all' === price ? 'text-bold' : ''}
                   to={getFilterUrl({ price: 'all' })}
                 >
-                  Any
+                  All
                 </Link>
               </li>
               {prices.map((p) => (
